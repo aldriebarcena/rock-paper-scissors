@@ -4,8 +4,16 @@
 // game played against computer, function getComputerChoice
 // returns rock, paper, scissors RANDOMLY
 // use console to test
-
-
+function getComputerChoice() {
+    const choiceList = [
+        "rock",
+        "paper",
+        "scissors"
+    ]
+    const choiceRandom = choiceList[Math.floor(Math.random()*choiceList.length)];
+    return choiceRandom
+}
+console.log(getComputerChoice())
 // computerSelection
 
 // playerSelection
