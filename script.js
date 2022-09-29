@@ -4,6 +4,8 @@
 // game played against computer, function getComputerChoice
 // returns rock, paper, scissors RANDOMLY
 // use console to test
+
+// computerSelection
 function getComputerChoice() {
     const choiceList = [
         "rock",
@@ -11,20 +13,27 @@ function getComputerChoice() {
         "scissors"
     ]
     const choiceRandom = choiceList[Math.floor(Math.random()*choiceList.length)];
+    // random choice syntax = arrayVariableName[Math.floor(Math.random()*arrayVariableName.length)]
     return choiceRandom
 }
 console.log(getComputerChoice())
-// computerSelection
+
 
 // playerSelection
 // use prompt()
-
-
+function playerSelection() {
+    const selection = prompt("Rock, Paper, or Scissors: ")
+    selection.toLowerCase()
+    return selection
+}
+console.log(playerSelection())
 
 // function that plays round of RPS (rock paper scissors)
 // takes 2 parameter: playerSelection and computerSelection
 // returns win/lose/tie
 // player selection case-INsensitive
+
+
 
 // function called game
 // playRound function INSIDE of game() to play 5 round game
