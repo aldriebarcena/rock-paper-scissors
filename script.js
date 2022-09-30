@@ -16,58 +16,68 @@ function getComputerChoice() {
 }
 const computerChoice = getComputerChoice()
 
+
 function playerSelection() {
     const selection = prompt("Rock, Paper, or Scissors: ")
-    selection.toLowerCase()
     return selection
-}
-const playerChoice = playerSelection()
+    }
+const playerChoice = playerSelection().toLowerCase()
+
 
 function playRound() {
+console.log('The computer chose ' + computerChoice)
+console.log('You chose ' + playerChoice)
+const win = 'You win!'
+const lose = "You lose!"
+const tie = "Tie!"
+const invalid = "Invalid input!"
     if (computerChoice == 'rock'){
         if (playerChoice == 'rock') {
-            console.log('Tie!')
+            return tie
         } else if (playerChoice == 'paper') {
-            console.log('You win!')
+            return win
         } else if (playerChoice == 'scissors') {
-            console.log('You lose!')
+            return lose
         } else {
-            console.log ('Error!')
+            return invalid
         }
     } else if (computerChoice == 'paper') {
         if (playerChoice == 'rock') {
-            console.log('You lose!')
+            return lose
         } else if (playerChoice == 'paper') {
-            console.log('Tie!')
+            return tie
         } else if (playerChoice == 'scissors') {
-            console.log('You win!')
+            return win
         } else {
-            console.log ('Error!')
+            return invalid
         }
     } else if (computerChoice == 'scissors') {
         if (playerChoice == 'rock') {
-            console.log('You win!')
+            return win
         } else if (playerChoice == 'paper') {
-            console.log('You lose!')
+            return lose
         } else if (playerChoice == 'scissors') {
-            console.log('Tie!')
+            return tie
         } else {
-            console.log ('Error!')
+            return invalid
         }          
 } else {
-    console.log('Error')
+    return invalid
 }
 }
-playRound()
-
-
-
+const round = playRound()
+console.log(round)
 
 
 // function called game
 // playRound function INSIDE of game() to play 5 round game
 // keeps score, reports overall winner/loser with console.log
 // use loops
+const computerScore = 0
+const playerScore = 0
+function game() {
+
+}
 
 //rework functions if needed
 // "helper" functions
