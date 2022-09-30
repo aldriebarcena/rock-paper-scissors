@@ -4,7 +4,8 @@
 // game played against computer, function getComputerChoice
 // returns rock, paper, scissors RANDOMLY
 // use console to test
-
+var again = 'yes'
+while (again == 'yes') {
 function getComputerChoice() {
     const choiceList = [
         'rock',
@@ -22,15 +23,22 @@ function playerSelection() {
     return selection
     }
 const playerChoice = playerSelection().toLowerCase()
+const round = playRound()
+
+console.log('The computer chose ' + computerChoice)
+console.log('You chose ' + playerChoice)
+console.log(round)
+
+again = prompt('Would you like to play again? (yes/no): ').toLowerCase()
 
 
 function playRound() {
-console.log('The computer chose ' + computerChoice)
-console.log('You chose ' + playerChoice)
+
 const win = 'You win!'
 const lose = "You lose!"
 const tie = "Tie!"
 const invalid = "Invalid input!"
+
     if (computerChoice == 'rock'){
         if (playerChoice == 'rock') {
             return tie
@@ -65,19 +73,12 @@ const invalid = "Invalid input!"
     return invalid
 }
 }
-const round = playRound()
-console.log(round)
-
-
-// function called game
-// playRound function INSIDE of game() to play 5 round game
-// keeps score, reports overall winner/loser with console.log
-// use loops
-const computerScore = 0
-const playerScore = 0
-function game() {
 
 }
 
-//rework functions if needed
-// "helper" functions
+
+
+
+
+
+
